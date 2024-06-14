@@ -1,0 +1,30 @@
+Check out my medium post: [https://medium.com/@jayshenkar27apr/simplify-your-workflow-mastering-ansible-ad-hoc-commands-046ded363ccd]
+
+1. ansible all -i /etc/ansible/hosts/inventory.ini -m ping -u ubuntu -k
+
+
+2. ansible ubuntu@3.110.147.230 -i /etc/ansible/hosts/inventory.ini -m ping -u ubuntu -k
+
+
+3. ansible all -i /etc/ansible/hosts/inventory.ini -m shell -a "free -m" -u ubuntu -k
+
+
+4. ansible all -i /etc/ansible/hosts/inventory.ini -m shell -a "df -h" -u ubuntu -k 
+
+
+5. ansible all -i /etc/ansible/hosts/inventory.ini -m command -a uptime -u ubuntu -k
+
+
+6. ansible all -i /etc/ansible/hosts/inventory.ini -a "git --version" -u ubuntu -k
+
+
+7. ansible all -i /etc/ansible/hosts/inventory.ini -m copy -a 'src=/home/user/demo.txt dest=/home/ubuntu mode=0644' -u ubuntu -k
+
+
+8. ansible ubuntu@15.206.74.6 -i /etc/ansible/hosts/inventory.ini -m shell -a 'sudo mkdir -p /home/ubuntu/folder' -u ubuntu -k
+
+
+9. ansible all -i /etc/ansible/hosts/inventory.ini -m shell -a "sudo apt update && sudo apt install -y python3"
+
+
+10. ansible all -i /etc/ansible/hosts/inventory.ini -m shell -a 'ps -aux' -u ubuntu -k
